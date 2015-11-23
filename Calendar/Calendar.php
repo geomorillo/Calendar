@@ -1,6 +1,6 @@
 <?php
 /**
- * Mail Helper
+ * Calendar Helper
  *
  * @author Jhobanny Morillo - geomorillo@yahoo.com
  * @version 1.0
