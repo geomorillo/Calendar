@@ -14,7 +14,7 @@ Router::any('thefunction/(:num)/(:num)', 'Controllers\TheController@thefunction'
 ```
 
 
-3) Put this in your controller 
+3) Create an alias on your controller 
     
 ``` 
 use Helpers\Calendar\Calendar; 
