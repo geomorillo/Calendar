@@ -5,25 +5,29 @@
 
 1) Copy Calendar folder to your Helpers folder
 2) Setup a route for your calendar
-''' Router::any('thefunction', 'Controllers\TheController@thefunction');
+
+``` Router::any('thefunction', 'Controllers\TheController@thefunction');
     Router::any('thefunction/(:num)/(:num)', 'Controllers\TheController@thefunction');//if you want to have next and prev 
-'''
+
+```
 
 3) Put this in your controller 
-    ''' use Helpers\Calendar\Calendar; '''
+    
+``` use Helpers\Calendar\Calendar; ```
 
 4) For creating a calendar just create an object and pass 2 parameters year,month to the generate method
-'''
+```
 public function thefunction(){
     $calendar = new Calendar();
     echo $calendar->generate(2015,2); //this will create a simple calendar 2015 Feb
 }
 
-'''
+```
+
 5) You can pass data to the calendar, using an associative array where the keys are the days you want to populate
 and the value can be a link.
 
-'''
+```
 public function thefunction(){
     $calendar = new Calendar();
     $data = array(
@@ -36,10 +40,11 @@ public function thefunction(){
     echo $calendar->generate(2015,2,$data); //this will create a simple calendar 2015 Feb
 }
 
-'''
+```
+
 6) You can customize your calendar with some configuration.
 
-'''
+```
     public function thefunction(){
 
         $config = array(
@@ -53,13 +58,13 @@ public function thefunction(){
         echo $calendar->generate(); //this will create a simple calendar
     }
 
-'''
+```
 
 7) If you want to put next, prev links you must pass parameter like this thefunction($year = '', $month = ''), 
  *show_next_prev* must be set to TRUE , the *next_prev_url* should be the name of the route on step 2 if left empty the
 current function is the default route
 
-'''
+```
     public function thefunction($year = '', $month = ''){
 
         $config = array(
@@ -73,10 +78,11 @@ current function is the default route
         echo $calendar->generate($year,$month); //this will create a simple calendar 
     }
 
-'''
+```
+
 8) You can change its design by using either the string or array method
 
-'''
+```
         $config['template'] = '
 
             {table_open}<table border="0" cellpadding="0" cellspacing="0">{/table_open}
@@ -118,8 +124,10 @@ current function is the default route
 
             echo $calendar->generate(); 
 
-'''
-'''
+```
+
+```
+
     $config['template'] = array(
             'table_open'           => '<table class="calendar">',
             'cal_cell_start'       => '<td class="day">',
@@ -128,10 +136,7 @@ current function is the default route
      $calendar = new Calendar($config);
 
      echo $calendar->generate();
-'''
-
-
-
+```
 
 9) Here is a reference for the config array 
 
