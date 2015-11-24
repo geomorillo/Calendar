@@ -1,9 +1,10 @@
-# Calendar
+Calendar 
 **Calendar Helper for Simple MVC Framework**
 
 **Installation**
 
 1) Copy Calendar folder to your Helpers folder
+
 2) Setup a route for your calendar
 
 ``` 
