@@ -66,7 +66,7 @@ public function thefunction(){
 ```
 
 7) If you want to put next, prev links you must pass parameter like this thefunction($year = '', $month = ''), 
- *show_next_prev* must be set to TRUE , the *next_prev_url* should be the name of the route on step 2 if left empty the
+ *show_next_prev* must be set to TRUE , the *next_prev_url* should be the name of the route on **step 2** if left empty the
 current function is the default route
 
 ```
