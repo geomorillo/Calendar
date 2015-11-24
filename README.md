@@ -6,14 +6,18 @@
 1) Copy Calendar folder to your Helpers folder
 2) Setup a route for your calendar
 
-``` Router::any('thefunction', 'Controllers\TheController@thefunction');
-    Router::any('thefunction/(:num)/(:num)', 'Controllers\TheController@thefunction');//if you want to have next and prev 
+``` 
+Router::any('thefunction', 'Controllers\TheController@thefunction');
+Router::any('thefunction/(:num)/(:num)', 'Controllers\TheController@thefunction');//if you want to have next and prev 
 
 ```
 
+
 3) Put this in your controller 
     
-``` use Helpers\Calendar\Calendar; ```
+``` 
+use Helpers\Calendar\Calendar; 
+```
 
 4) For creating a calendar just create an object and pass 2 parameters year,month to the generate method
 ```
